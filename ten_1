@@ -1,0 +1,96 @@
+;file: ten_1
+
+2/13{
+    ;label: Feb13_Start
+    ;時間帯: 昼休み
+    ;背景: 大学キャンパス
+    ;BGM: 日常
+
+    ;地の文（事実のみ）
+    昼休みになった。
+
+    [選択肢]
+    1) 部室に行く
+        :Feb13_Lunch_Clubroom
+    2) 昼食を食べに行く
+        :Feb13_Lunch_Meal
+    3) 次の講義の準備をする
+        :Feb13_Lunch_Prepare
+
+
+    ;------------------------
+    ; 昼ルート：部室
+    ;------------------------
+    :Feb13_Lunch_Clubroom
+    ;背景: 映画サークル部室
+    ;地の文
+    部室に寄った。
+    goto Feb13_Job_Arrive
+
+
+    ;------------------------
+    ; 昼ルート：昼食
+    ;------------------------
+    :Feb13_Lunch_Meal
+    ;背景: 学食
+    ;地の文
+    昼食をとった。
+    goto Feb13_Job_Arrive
+
+
+    ;------------------------
+    ; 昼ルート：講義準備
+    ;------------------------
+    :Feb13_Lunch_Prepare
+    ;背景: 図書館 or 教室
+    ;地の文
+    次の講義の準備をした。
+    goto Feb13_Job_Arrive
+
+
+    ;========================
+    ; 共通ルート：バイト（転の核）
+    ;========================
+    :Feb13_Job_Arrive
+    ;背景: バイト先
+    ;時間帯: 夕方〜夜
+    ;BGM: 仕事中
+
+    :Feb13_Job_Work_Start
+    ;地の文
+    バイトが始まった。
+
+    :Feb13_Job_Heroine_Arrive
+    ;地の文（事実のみ）
+    客として、ヒロインとその友達が入ってくる。
+
+    :Feb13_Job_Choice
+    [選択肢]
+    1) 普通に接客する
+        :Feb13_Job_Reply_A
+    2) 少し丁寧に接客する
+        :Feb13_Job_Reply_B
+    3) できるだけ素早く対応する
+        :Feb13_Job_Reply_C
+
+    :Feb13_Job_Reply_A
+    ;好感度加算（中）
+    goto Feb13_Job_Result
+
+    :Feb13_Job_Reply_B
+    ;好感度加算（大）
+    goto Feb13_Job_Result
+
+    :Feb13_Job_Reply_C
+    ;好感度加算（小〜中）
+    goto Feb13_Job_Result
+
+    :Feb13_Job_Result
+    ;地の文
+    バイトが終わった。
+
+    :Feb13_End
+    ;背景白
+    ;地の文
+    今日が終わった。
+}

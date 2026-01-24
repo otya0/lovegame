@@ -1,9 +1,0 @@
-:Feb11_Lunch_Meal
-;背景: 学食 or 学外
-;時間帯: 昼
-
-:Feb11_Lunch_Meal_Order        ;注文
-:Feb11_Lunch_Meal_Eat          ;食事
-:Feb11_Lunch_Meal_End          ;昼休み終了
-
-goto Feb11_Job_Arrive

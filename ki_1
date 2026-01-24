@@ -1,0 +1,125 @@
+;file: ki_1
+
+2/12{
+    ;label: Feb12_Start
+    ;時間帯: 講義後（夕方）
+    ;背景: 大学・講義棟の廊下
+    ;BGM: 日常
+
+    ;地の文（事実のみ）
+    講義が終わった。
+
+    [選択肢]
+    1) 映画サークルに行く
+        :Feb12_Circle_Arrive
+    2) 自宅に帰る
+        :Feb12_Home_Arrive
+    3) 図書館に行く
+        :Feb12_Library_Arrive
+
+
+    ;========================
+    ; 映画サークル（映画①）
+    ;========================
+    :Feb12_Circle_Arrive
+    ;背景: 映画サークル部室
+    ;時間帯: 夕方
+
+    ;地の文
+    部室に入った。
+
+    :Feb12_Movie_Start
+    ;背景: 部室（上映準備）
+    ;BGM: 静か
+
+    ;地の文
+    映画が始まった。
+
+    :Feb12_Movie_End
+    ;地の文
+    映画が終わった。
+
+    :Feb12_Opinion_Start
+    ;立ち絵表示: ヒロイン
+    ;表情: ヒロイン・普通
+
+    ;地の文
+    感想会が始まった。
+
+    :Feb12_Opinion_HeroineLine
+    #ヒロイン:
+    {
+        ベタな展開だけど、やっぱり幸せそうで好きな展開だなって思った。
+    }
+
+    :Feb12_Opinion_Choice
+    [選択肢]
+    1) 共感する
+        :Feb12_Opinion_Reply_A
+    2) 現実は難しいと言う
+        :Feb12_Opinion_Reply_B
+    3) 軽く流す
+        :Feb12_Opinion_Reply_C
+
+    :Feb12_Opinion_Reply_A
+    #主人公:
+    {
+        そうだね。観てて楽しかった。
+    }
+    goto Feb12_Opinion_Result_A
+
+    :Feb12_Opinion_Reply_B
+    #主人公:
+    {
+        まあでも、現実だとああいう風になるのは難しいよね。
+    }
+    goto Feb12_Opinion_Result_B
+
+    :Feb12_Opinion_Reply_C
+    #主人公:
+    {
+        そうなんだ。
+    }
+    goto Feb12_Opinion_Result_C
+
+    :Feb12_Opinion_Result_A
+    ;好感度加算（小〜中）
+    goto Feb12_End
+
+    :Feb12_Opinion_Result_B
+    ;好感度加算（小）
+    goto Feb12_End
+
+    :Feb12_Opinion_Result_C
+    ;好感度変化（±0）
+    goto Feb12_End
+
+
+    ;========================
+    ; 自宅
+    ;========================
+    :Feb12_Home_Arrive
+    ;背景: 自宅
+    ;地の文
+    帰宅した。
+    goto Feb12_End
+
+
+    ;========================
+    ; 図書館
+    ;========================
+    :Feb12_Library_Arrive
+    ;背景: 図書館
+    ;地の文
+    図書館に入った。
+    goto Feb12_End
+
+
+    ;========================
+    ; 1日終了
+    ;========================
+    :Feb12_End
+    ;背景白
+    ;地の文
+    今日が終わった。
+}

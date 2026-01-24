@@ -1,8 +1,0 @@
-:Feb11_Lunch_Prepare
-;背景: 図書館 or 教室
-;時間帯: 昼
-
-:Feb11_Lunch_Prepare_Study     ;準備
-:Feb11_Lunch_Prepare_End       ;昼休み終了
-
-goto Feb11_Job_Arrive

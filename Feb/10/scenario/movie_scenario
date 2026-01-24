@@ -1,8 +1,0 @@
-:Feb10_Circle_Arrive          ;部室に到着
-:Feb10_Movie_Start            ;上映開始
-:Feb10_Movie_End              ;上映終了
-:Feb10_Opinion_Start          ;感想会開始
-:Feb10_Opinion_HeroineLine    ;ヒロイン固定セリフ
-:Feb10_Opinion_Choice         ;プレイヤー返答（選択肢）
-:Feb10_Opinion_Result         ;反応・好感度処理
-:Feb10_Circle_End             ;解散→日付終了

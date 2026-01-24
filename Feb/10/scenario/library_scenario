@@ -1,7 +1,0 @@
-:Feb10_Library_Arrive         ;図書館に入る
-:Feb10_Library_SelectSeat     ;席を選ぶ
-:Feb10_Library_Study_Start    ;勉強開始
-:Feb10_Library_Break          ;小休憩
-:Feb10_Library_Study_End      ;閉館アナウンス
-:Feb10_Library_Leave          ;図書館を出る
-:Feb10_Library_End            ;日付終了
