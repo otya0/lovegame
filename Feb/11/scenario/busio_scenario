@@ -1,0 +1,8 @@
+:Feb11_Lunch_Clubroom
+;背景: 映画サークル部室
+;時間帯: 昼
+
+:Feb11_Lunch_Clubroom_Stay     ;少し過ごす
+:Feb11_Lunch_Clubroom_End      ;昼休み終了
+
+goto Feb11_Job_Arrive
